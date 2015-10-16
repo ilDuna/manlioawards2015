@@ -1,4 +1,4 @@
-### Manlio Awards 2015
+# Manlio Awards 2015
 
 ## Requirements
 - Jquery
