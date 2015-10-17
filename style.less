@@ -1,7 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
 @wall-color: #000000;
+@slide-text-color: #F0F0F0;
+@slide-h1-color: #F0F0F0;
 
 body {
 	overflow: hidden;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 #main-wall {
@@ -30,5 +35,81 @@ body {
 	span {
 		display: block;
 		color: white;
+	}
+}
+
+#container-wall {
+	display: block;
+	margin: 50px;
+	width: 70%;
+	height: 80%;
+	perspective: 2000px;
+}
+
+.speaker {
+	display: none;
+	position: absolute;
+	max-height: 70%;
+	bottom: -10px;
+	right: 4%;
+	z-index: 100;
+}
+
+.nextSlide {
+	display: none;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	z-index: 100;
+
+	cursor: pointer;
+	font-size: 20px;
+	color: #AFDAF0;
+	&:hover {
+		color: white;
+	}
+}
+
+.slide {
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	transform: rotateY(20deg);
+
+	color: @slide-text-color;
+	font-size: 2.5vh;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,646375+100 */
+	background: #000000; /* Old browsers */
+	background: -moz-linear-gradient(top,  #000000 0%, #646375 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#646375)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #000000 0%,#646375 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #000000 0%,#646375 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #000000 0%,#646375 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #000000 0%,#646375 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#646375',GradientType=0 ); /* IE6-9 */
+
+	h1 {
+		display: block;
+		text-align: center;
+		color: @slide-h1-color;
+		font-size: 6vh;
+		font-weight: 700;
+		padding-bottom: 30px;
+	}
+
+	p {
+		display: block;
+		font-size: 3.0vh;
+		line-height: 4.0vh;
+	}
+
+	.logo {
+		display: block;
+		position: relative;
+		margin-top: 10%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
