@@ -1,0 +1,30 @@
+{
+	"presentation": "ManlioAwards2015",
+	"date": "12/2015",
+	"slides": [
+		{
+			"id": "#slide_0",
+			"subtitles": [
+				"sottotitolo 1 della slide0",
+				"sottotitolo 2 della slide0",
+				"sottotitolo 3 della slide0"
+			]
+		},
+		{
+			"id": "#slide_1",
+			"subtitles": [
+				"sottotitolo 1 della slide1",
+				"sottotitolo 2 della slide1",
+				"sottotitolo 3 della slide1"
+			]
+		},
+		{
+			"id": "#slide_2",
+			"subtitles": [
+				"sottotitolo 1 della slide3",
+				"sottotitolo 2 della slide3",
+				"sottotitolo 3 della slide3"
+			]
+		}
+	]
+}

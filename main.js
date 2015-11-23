@@ -1,6 +1,6 @@
 var audio_fanboy1, audio_theme;
-var slides = ["#slide_0","#slide_1","#slide_2"];
-var slideIndex = -1;
+var slideIndex = 0;
+var subIndex = 0;
 var slideTransition = 800;
 var slideSlowTransition = 3000;
 prepareResources();
@@ -13,43 +13,47 @@ function prepareResources() {
 	audio_theme = document.createElement('audio');
 	audio_theme.setAttribute('src', 'audio/academy.mp3');
 
-	$('.nextSlide').click(function(){
-		nextSlide();
-	});
-
-	setTimeout(function() {
+	$.getJSON('./ManlioAwards2015.json', function(data) {
 		audio_fanboy1.play();
-		//audio_theme.play();
+		audio_theme.play();
 
 		$('#loading-popup').fadeOut("slow", function() {
-			$('#speakerImg').fadeIn(4000, function() { setTimeout(nextSlide(true), 1500); });
+			$('#speakerImg').fadeIn(4000, function() { setTimeout(nextSlide(data.slides), 1500); });
 			$('.nextSlide').fadeIn(4000, function() {});
 		});
-	}, 4000);
+
+		$('.nextSlide').click(function(){
+			nextSlide(data.slides);
+		});
+	});
 }
 
-function nextSlide(slow) {
-	if (slow == undefined) { slow = false; }
-	
-	if (slides.length == 0 || slideIndex == slides.length - 1) {
+function nextSlide(slides) {
+	if (slides.length == 0) {
 		return -1;
 	}
-	else if (slideIndex == -1) {
-		if (!slow) {
-			$(slides[0]).fadeIn(slideTransition, function() {});
+
+	if (subIndex == 0) {
+		if (slideIndex == 0) {
+			$(slides[slideIndex].id).fadeIn(slideTransition, function() {});
 		}
 		else {
-			$(slides[0]).fadeIn(slideSlowTransition, function() {});
+			$(slides[slideIndex-1].id).fadeOut(slideTransition, function() {
+				$(slides[slideIndex].id).fadeIn(slideTransition, function() {});
+			});
 		}
-		slideIndex = 0;
 	}
-	else if (slideIndex >=0 && slideIndex < slides.length) {
-		slideIndex++;
-		$(slides[slideIndex-1]).fadeOut(slideTransition, function() {
-			$(slides[slideIndex]).fadeIn(slideTransition, function() {});
-		});
-		if (slideIndex == slides.length - 1) {
-			$('.nextSlide').fadeOut("fast", function() {});
+
+	var subCount = slides[slideIndex].subtitles.length;
+	if (subCount > 0 && subIndex < subCount) {
+		$('.sub-container').text(slides[slideIndex].subtitles[subIndex]);
+		if (subIndex == subCount - 1) {
+			subIndex = 0;
+			if (slideIndex < slides.length - 1) {slideIndex++;}
+			else {$('.nextSlide').fadeOut("fast", function() {});}
+		}
+		else {
+			subIndex++;
 		}
 	}
 }
