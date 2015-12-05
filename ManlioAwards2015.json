@@ -5,21 +5,33 @@
 		{
 			"id": "#slide_0",
 			"subtitles": [
-				"Benvenuti Manli ai Manlio Awards 2015",
-				"a qualcuno pesava il culo registrare audio quindi accontentatevi dei sottotitoli",
-				"e della musichetta di sottofondo demenziale",
-				"potete cliccare solo su Avanti, ma non tornare indietro",
-				"perché al Duna non andava di programmare"
+				"Benvenuti!",
+				"Benvenuti ai Manlio Awards 2015",
+				"quest'anno abbiamo sottotitoli e musica demenziale",
+				"e potete cliccare solo su Avanti"
 			]
 		},
 		{
 			"id": "#slide_1",
 			"subtitles": [
-				"É stato un anno molto ricco per il Manlio",
+				"É stato un anno fantastico per il Manlio",
 				"abbiamo perso post, like, utenti attivi e la qualità si è abbassata",
-				"un anno fantastico!!!",
 				"fortunatamente i soliti nerdoni spammoni sono sempre presenti",
-				"si si ce l'ho proprio con te",
+				"come pure gli scioperi #pasqualepirla"
+			]
+		},
+		{
+			"id": "#slide_1bis",
+			"subtitles": [
+				"e il classico #ManlioAntiPupDay",
+				"il #ManlioTetteDay - 19 Marzo",
+				"il #SashaDay - 16-17 Aprile",
+				"e il #ManlioGameOfThronesDay - 2/21 Giugno (che non trattando di figa non si caga più nessuno LOL)"
+			]
+		},
+		{
+			"id": "#slide_1tris",
+			"subtitles": [
 				"Basta stronzate, iniziamo con i punteggi",
 				"mostriamo prima i top 5 di ciascuna categoria",
 				"alla fine della presentazione potrete guardare le classifiche complete"
