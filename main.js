@@ -12,20 +12,23 @@ function prepareResources() {
 
 	audio_theme = document.createElement('audio');
 	audio_theme.setAttribute('src', 'audio/academy.mp3');
+	audio_theme.setAttribute('loop', true);
 
-	$.getJSON('./ManlioAwards2015.json', function(data) {
-		audio_fanboy1.play();
-		audio_theme.play();
+	setTimeout(function() {
+		$.getJSON('./ManlioAwards2015.json', function(data) {
+			audio_fanboy1.play();
+			audio_theme.play();
 
-		$('#loading-popup').fadeOut("slow", function() {
-			$('#speakerImg').fadeIn(4000, function() { setTimeout(nextSlide(data.slides), 1500); });
-			$('.nextSlide').fadeIn(4000, function() {});
+			$('#loading-popup').fadeOut("slow", function() {
+				$('#speakerImg').fadeIn(4000, function() { setTimeout(nextSlide(data.slides), 1500); });
+				$('.nextSlide').fadeIn(4000, function() {});
+			});
+
+			$('.nextSlide').click(function(){
+				nextSlide(data.slides);
+			});
 		});
-
-		$('.nextSlide').click(function(){
-			nextSlide(data.slides);
-		});
-	});
+	}, 6000);
 }
 
 function nextSlide(slides) {
