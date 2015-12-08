@@ -8,7 +8,7 @@
 				"Benvenuti!",
 				"Benvenuti ai Manlio Awards 2015",
 				"quest'anno abbiamo sottotitoli e musica demenziale",
-				"e potete cliccare solo su Avanti"
+				"e potete cliccare SOLO su Avanti #perchési"
 			]
 		},
 		{
@@ -16,8 +16,9 @@
 			"subtitles": [
 				"É stato un anno fantastico per il Manlio",
 				"abbiamo perso post, like, utenti attivi e la qualità si è abbassata",
+				"yeeaahhh",
 				"fortunatamente i soliti nerdoni spammoni sono sempre presenti",
-				"come pure gli scioperi #pasqualepirla"
+				"come pure gli scioperi e i #pasqualepirla"
 			]
 		},
 		{
@@ -26,21 +27,68 @@
 				"e il classico #ManlioAntiPupDay",
 				"il #ManlioTetteDay - 19 Marzo",
 				"il #SashaDay - 16-17 Aprile",
-				"e il #ManlioGameOfThronesDay - 2/21 Giugno (che non trattando di figa non si caga più nessuno LOL)"
+				"e il #ManlioGameOfThronesDay - 2/21 Giugno (che non trattando di figa non si caga più nessuno LOL)",
+				"non ci si annoia mai eh"
 			]
 		},
 		{
 			"id": "#slide_1tris",
 			"subtitles": [
-				"Basta stronzate, iniziamo con i punteggi",
+				"Ma iniziamo subito con i punteggi",
 				"mostriamo prima i top 5 di ciascuna categoria",
 				"alla fine della presentazione potrete guardare le classifiche complete"
 			]
 		},
 		{
-			"id": "#slide_2",
+			"id": "#mostlikedpost",
 			"subtitles": [
-				"Premio per miglior post inutile dell'anno"
+				"Premio per il post più meglio super piaciuto"
+			]
+		},
+		{
+			"id": "#mostcommentedpost",
+			"subtitles": [
+				"Premio per il post con più cagnara"
+			]
+		},
+		{
+			"id": "#mostlikedcomment",
+			"subtitles": [
+				"Premio per il commento più laikkato"
+			]
+		},
+		{
+			"id": "#mostcomments",
+			"subtitles": [
+				"Premio per Manlio che deve sempre dire la sua"
+			]
+		},
+		{
+			"id": "#mostposts",
+			"subtitles": [
+				"Premio per migliore spammone dell'anno!!",
+				"sul serio.. avevate dubbi?! LOL"
+			]
+		},
+		{
+			"id": "#waiting",
+			"subtitles": [
+				"ora",
+				"reggeteve la pompa",
+				"la classifica finale dei Manlio Awards 2015...",
+				"... and the manlio-winner is ..."
+			]
+		},
+		{
+			"id": "#final",
+			"subtitles": [
+				"..."
+			]
+		},
+		{
+			"id": "#classificacompleta",
+			"subtitles": [
+				"al prossimo anno belli :]"
 			]
 		}
 	]

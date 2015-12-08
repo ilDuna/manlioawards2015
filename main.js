@@ -3,6 +3,7 @@ var slideIndex = 0;
 var subIndex = 0;
 var slideTransition = 800;
 var slideSlowTransition = 3000;
+var fixedPlayout = 6000;
 prepareResources();
 
 function prepareResources() {
@@ -28,7 +29,7 @@ function prepareResources() {
 				nextSlide(data.slides);
 			});
 		});
-	}, 6000);
+	}, fixedPlayout);
 }
 
 function nextSlide(slides) {
@@ -41,8 +42,10 @@ function nextSlide(slides) {
 			$(slides[slideIndex].id).fadeIn(slideTransition, function() {});
 		}
 		else {
-			$(slides[slideIndex-1].id).fadeOut(slideTransition, function() {
-				$(slides[slideIndex].id).fadeIn(slideTransition, function() {});
+			var slideToFadeOut = slideIndex - 1;
+			var slideToFadeIn = slideIndex;
+			$(slides[slideToFadeOut].id).fadeOut(slideTransition, function() {
+				$(slides[slideToFadeIn].id).fadeIn(slideTransition, function() {});
 			});
 		}
 	}
@@ -59,4 +62,5 @@ function nextSlide(slides) {
 			subIndex++;
 		}
 	}
+	console.log("next slide "+slideIndex+" ("+slides[slideIndex].id+") with sub "+subIndex);
 }

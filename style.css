@@ -68,7 +68,7 @@ body {
   height: 100%;
   padding: 40px;
   transform: rotateY(20deg);
-  color: #f0f0f0;
+  color: #F0F0F0;
   font-size: 2.5vh;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+36,646375+100 */
   background: #000000;
@@ -91,8 +91,16 @@ body {
 .slide h1 {
   display: block;
   text-align: center;
-  color: #f0f0f0;
+  color: #F0F0F0;
   font-size: 6vh;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.slide h2 {
+  display: block;
+  text-align: center;
+  color: #F0F0F0;
+  font-size: 3.5vh;
   font-weight: 700;
   padding-bottom: 30px;
 }
@@ -119,6 +127,9 @@ body {
   vertical-align: middle;
   padding-left: 5px;
   padding-right: 5px;
+}
+.slide.scrollable {
+  overflow-y: scroll;
 }
 .sub-container {
   display: block;
