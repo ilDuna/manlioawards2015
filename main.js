@@ -4,6 +4,8 @@ var subIndex = 0;
 var slideTransition = 800;
 var slideSlowTransition = 3000;
 var fixedPlayout = 6000;
+var lastClickTimestamp = 0;
+var minClickDelay = 850;
 prepareResources();
 
 function prepareResources() {
@@ -33,6 +35,11 @@ function prepareResources() {
 }
 
 function nextSlide(slides) {
+	if (Date.now() - lastClickTimestamp < minClickDelay) {
+		return;
+	}
+	lastClickTimestamp = Date.now();
+
 	if (slides.length == 0) {
 		return -1;
 	}
